@@ -37,7 +37,7 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
   routeAfterLogin: '/dashboard',
   routeAfterSignUp: '/dashboard',
   forceLogin: true,
-});''
+});'
 
 # Out of the Box Iron Router Routes
 * /signup
