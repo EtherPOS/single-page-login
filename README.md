@@ -27,6 +27,7 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 * routeAfterSignUp: Iron Router route after sign up.
 * forceLogin: Boolean.  Forces single page login except for signup and forgot-password routes.
 
+```
   SinglePageLogin.config({
     loginTitle: 'Single page login',
     signupTitle: 'Single page sign up',
@@ -38,6 +39,7 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
     routeAfterSignUp: '/dashboard',
     forceLogin: true,
   });
+```
 
 # Out of the Box Iron Router Routes
 * /signup
