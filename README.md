@@ -29,15 +29,15 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 
 ```
   SinglePageLogin.config({
-    loginTitle: 'Single page login',
-    signupTitle: 'Single page sign up',
-    forgotPasswordTitle: 'Retrieve password',
-    canRetrievePassword: true,
-    passwordSignupFields: 'EMAIL_ONLY',
-    forbidClientAccountCreation: false,
-    routeAfterLogin: '/dashboard',
-    routeAfterSignUp: '/dashboard',
-    forceLogin: true,
+      loginTitle: 'Single page login',
+      signupTitle: 'Single page sign up',
+      forgotPasswordTitle: 'Retrieve password',
+      canRetrievePassword: true,
+      passwordSignupFields: 'EMAIL_ONLY',
+      forbidClientAccountCreation: false,
+      routeAfterLogin: '/dashboard',
+      routeAfterSignUp: '/dashboard',
+      forceLogin: true,
   });
 ```
 
