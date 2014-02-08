@@ -13,7 +13,7 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 
 # Installation
 
-  mrt add single-page-form
+    `mrt add single-page-form`
 
 # Configuration
 
@@ -27,22 +27,22 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 * routeAfterSignUp: Iron Router route after sign up.
 * forceLogin: Boolean.  Forces single page login except for signup and forgot-password routes.
 
-  SinglePageLogin.config({
-    loginTitle: 'Single page login',
-    signupTitle: 'Single page sign up',
-    forgotPasswordTitle: 'Retrieve password',
-    canRetrievePassword: true,
-    passwordSignupFields: 'EMAIL_ONLY',
-    forbidClientAccountCreation: false,
-    routeAfterLogin: '/dashboard',
-    routeAfterSignUp: '/dashboard',
-    forceLogin: true,
-  });
+    `SinglePageLogin.config({
+      loginTitle: 'Single page login',
+      signupTitle: 'Single page sign up',
+      forgotPasswordTitle: 'Retrieve password',
+      canRetrievePassword: true,
+      passwordSignupFields: 'EMAIL_ONLY',
+      forbidClientAccountCreation: false,
+      routeAfterLogin: '/dashboard',
+      routeAfterSignUp: '/dashboard',
+      forceLogin: true,
+    });`
 
 # Out of the Box Iron Router Routes
-  /signup
-  /login
-  /forgot-password
+* /signup
+* /login
+* /forgot-password
 
 # License
 Copyright (c) 2013 [EtherPOS](http://www.etherpos.com/ "EtherPOS, LLC"). Released under an MIT license.
