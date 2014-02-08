@@ -3,8 +3,9 @@
 A meteorite package for a Bootstrap 3 Googlesque login, sign up and password reminder form and functionality.
 
 # Meteor Dependencies
-accounts-password
-accounts-ui
+
+* accounts-password
+* accounts-ui
 
 # Meteorite Atmosphere Dependencies
 * [iron-router](https://atmosphere.meteor.com/package/iron-router "iron-router")
