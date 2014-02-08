@@ -1,0 +1,70 @@
+<template name="singlePageLogin"> 
+  <div class="row">
+  <div class="col-sm-6 col-md-4 col-md-offset-4">
+    <h1 class="text-center login-title">{{loginTitle}}</h1>
+    <div class="account-wall">
+      <img class="profile-img" src="photo.png"
+          alt="">
+      <span id="single-page-login-alert"></span>
+      <form class="form-signin">
+        {{formFields}}
+        <input name="password" id="password" type="password" class="form-control" placeholder="Password" required>
+        <button id='submit' class="btn btn-lg btn-primary btn-block" type="submit">
+            Sign In</button>
+      </form>
+    </div>
+    {{#if canSignUp}}
+      <a href="#" class="text-center new-account" id="new-account">Create an account </a>
+    {{/if}}
+    {{#if canRetrievePassword}}
+      <a href="#" class="text-center new-account" id="forgot-password">Forgot password? </a>
+    {{/if}}
+  </div> 
+</div>
+</template>
+
+<template name="singlePageSignUp"> 
+  {{#if canSignUp}}
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <h1 class="text-center login-title">{{signupTitle}}</h1>
+        <div class="account-wall">
+          <img class="profile-img" src="photo.png"
+              alt="">
+          <span id="single-page-login-alert"></span>
+          <form class="form-signin">
+            {{formFields}}
+            <input name="password" id="password" type="password" class="form-control" placeholder="Password" required>
+            <button id='submit' class="btn btn-lg btn-primary btn-block" type="submit">
+                Sign Up</button>
+            <a href type="button" id='cancel' class="btn btn-lg btn-primary btn-block">
+                Cancel</a>
+          </form>
+        </div>
+      </div> 
+    </div>
+  {{/if}}
+</template>
+
+<template name="singlePageForgotPassword">
+  {{#if canRetrievePassword}}
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <h1 class="text-center login-title">{{forgotPasswordTitle}}</h1>
+        <div class="account-wall">
+          <img class="profile-img" src="photo.png"
+              alt="">
+          <span id="single-page-login-alert"></span>
+          <form class="form-password-lookup">
+            <input name="email" id="email" type="text" class="form-control" placeholder="Email" required>
+ 
+            <button id='submit' class="btn btn-lg btn-primary btn-block" type="submit">
+            Submit</button>
+            <a href type="button" id='cancel' class="btn btn-lg btn-primary btn-block">
+                Cancel</a>
+          </form>
+        </div>
+      </div> 
+    </div>
+  {{/if}}
+</template>
