@@ -1,3 +1,5 @@
+
+
 .form-signin, .form-password-lookup
 {
     max-width: 330px;
@@ -44,6 +46,7 @@
 }
 .account-wall
 {
+
     margin-top: 20px;
     padding: 40px 0px 20px 0px;
     background-color: #f7f7f7;
@@ -58,8 +61,9 @@
     font-weight: 400;
     display: block;
 }
+
 .profile-img
-{
+{   
     width: 96px;
     height: 96px;
     margin: 0 auto 10px;
@@ -68,6 +72,7 @@
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
+
 .new-account
 {
     display: block;
