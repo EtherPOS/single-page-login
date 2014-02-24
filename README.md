@@ -26,6 +26,7 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 * routeAfterLogin: Iron Router route after login.
 * routeAfterSignUp: Iron Router route after sign up.
 * forceLogin: Boolean.  Forces single page login except for signup and forgot-password routes.
+* exceptRoutes: Array. Add an array of routes that are ignored by foreLogin i.e ['home','about']
 
 
 ```

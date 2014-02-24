@@ -11,6 +11,7 @@ SinglePageLogin = {
     routeAfterLogin: '/dashboard',
     routeAfterSignUp: '/dashboard',
     forceLogin: false,
+    exceptRoutes: [],
   },
   config: function(appConfig) {
     this.settings = _.extend(this.settings, appConfig);
@@ -45,12 +46,10 @@ SinglePageLogin = {
         this.stop();
       }
     }
-    if(this.settings.forceLogin)
-      Router.before(requireLogin, {except: [
-        'singlePageLogin', 
-        'singlePageSignUp',
-        'singlePageForgotPassword', 
-      ]});
+    if(this.settings.forceLogin){
+      this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
+      Router.before(requireLogin, {except: this.settings.exceptRoutes});
+    }
   }
 };
 
