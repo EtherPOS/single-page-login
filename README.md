@@ -15,7 +15,7 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 
     mrt add single-page-login
 
-# Configuration
+# Configuration - put in client/server shared folder
 
 * loginTitle: Sets the title on the login page.
 * signupTitle: Sets the title on the sign up page.
@@ -26,6 +26,7 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 * routeAfterLogin: Iron Router route after login.
 * routeAfterSignUp: Iron Router route after sign up.
 * forceLogin: Boolean.  Forces single page login except for signup and forgot-password routes.
+
 
 ```
   SinglePageLogin.config({

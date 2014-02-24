@@ -14,10 +14,12 @@ SinglePageLogin = {
   },
   config: function(appConfig) {
     this.settings = _.extend(this.settings, appConfig);
-    Accounts.ui.config({
-      //USERNAME_AND_EMAIL, USERNAME_AND_OPTIONAL_EMAIL, USERNAME_ONLY, EMAIL_ONLY
-      passwordSignupFields: this.settings.passwordSignupFields
-    });
+    if (Meteor.isClient) {
+      Accounts.ui.config({
+        //USERNAME_AND_EMAIL, USERNAME_AND_OPTIONAL_EMAIL, USERNAME_ONLY, EMAIL_ONLY
+        passwordSignupFields: this.settings.passwordSignupFields
+      });
+    }
     Accounts.config({
       forbidClientAccountCreation: this.settings.forbidClientAccountCreation
     });
