@@ -13,7 +13,7 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 
 # Installation
 
-    mrt add single-page-form
+    mrt add single-page-login
 
 # Configuration
 
