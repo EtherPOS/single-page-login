@@ -40,15 +40,15 @@ SinglePageLogin = {
       });
 
     });
-    var requireLogin = function() {
-      if (! Meteor.user()) {
+    var requireLogin = function(pause) {
+      if (!Meteor.user()) {
         this.render('singlePageLogin');
-        this.stop();
+        pause();
       }
     }
     if(this.settings.forceLogin){
       this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
-      Router.before(requireLogin, {except: this.settings.exceptRoutes});
+      Router.onBeforeAction(requireLogin, {except: this.settings.exceptRoutes});
     }
   }
 };
