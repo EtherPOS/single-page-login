@@ -3,7 +3,7 @@
   "description": "A meteorite package for a Bootstrap 3 Googlesque login, sign up and password reminder form and functionality.",
   "homepage": "https://github.com/EtherPOS/single-page-login",
   "author": "EtherPOS  (http://www.etherpos.com) Stephen Cannon <stephentcannon@gmail.com>",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "git": "https://github.com/EtherPOS/single-page-login.git",
   "packages": {
   }
