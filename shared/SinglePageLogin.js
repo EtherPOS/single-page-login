@@ -46,10 +46,12 @@ SinglePageLogin = {
         pause();
       }
     }
+    
     if(this.settings.forceLogin){
       this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
       Router.onBeforeAction(requireLogin, {except: this.settings.exceptRoutes});
     }
+    
   }
 };
 
