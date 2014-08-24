@@ -40,8 +40,9 @@ SinglePageLogin = {
       });
 
     });
+    
     var requireLogin = function(pause) {
-      if (!Meteor.user()) {
+      if (!(Meteor.loggingIn() || Meteor.user())) {
         this.render('singlePageLogin');
         pause();
       }
