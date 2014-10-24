@@ -1,6 +1,6 @@
 # single-page-login
 
-A meteorite package for a Bootstrap 3 Googlesque login, sign up and password reminder form and functionality.
+A meteor package for a Bootstrap 3 Googlesque login, sign up and password reminder form and functionality.
 
 # Meteor Dependencies
 
@@ -8,12 +8,12 @@ A meteorite package for a Bootstrap 3 Googlesque login, sign up and password rem
 * accounts-ui
 
 # Meteorite Atmosphere Dependencies
-* [iron-router](https://atmosphere.meteor.com/package/iron-router "iron-router")
-* [bootstrap-3](https://atmosphere.meteor.com/package/bootstrap-3 "bootstrap-e")
+* [iron-router](https://atmosphere.meteor.com/package/iron:router "iron-router")
+* [bootstrap-3](https://atmosphere.meteor.com/package/mizzao:bootstrap-3 "bootstrap-3")
 
 # Installation
 
-    mrt add single-page-login
+    meteor add steeve:single-page-login
 
 # Configuration - put in client/server shared folder
 
