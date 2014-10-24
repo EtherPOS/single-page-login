@@ -7,9 +7,9 @@ A meteor package for a Bootstrap 3 Googlesque login, sign up and password remind
 * accounts-password
 * accounts-ui
 
-# Meteorite Atmosphere Dependencies
-* [iron-router](https://atmosphere.meteor.com/package/iron:router "iron-router")
-* [bootstrap-3](https://atmosphere.meteor.com/package/mizzao:bootstrap-3 "bootstrap-3")
+# Dependencies
+* [iron-router](https://atmospherejs.com/iron/router "iron-router")
+* [bootstrap-3](https://atmospherejs.com/mizzao/bootstrap-3 "bootstrap-3")
 
 # Installation
 
