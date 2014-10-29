@@ -1,8 +1,8 @@
-UI.registerHelper('canSignUp', function() {
+Template.registerHelper('canSignUp', function() {
   if (!Accounts._options['forbidClientAccountCreation'])
     return true;
 });
 
-UI.registerHelper('canRetrievePassword', function() {
+Template.registerHelper('canRetrievePassword', function() {
   return SinglePageLogin.settings.canRetrievePassword;
 });
