@@ -1,7 +1,7 @@
 Package.describe({
   summary: "A meteor package for a Bootstrap 3 Googlesque login, sign up and password reminder",
   // Version number.
-  version: "0.2.8",
+  version: "0.2.9",
   // Optional.  Default is package directory name.
   name: "steeve:single-page-login",
   // Optional github URL to your source repository.
@@ -26,8 +26,11 @@ Package.onUse(function (api) {
     ],
   'client');
 
-  api.addFiles('shared/SinglePageLogin.js', ['client', 'server']);
+  api.addFiles('shared/SinglePageLogin.js');
 
   api.use('iron:router@0.9.4', 'client');
   api.use('mizzao:bootstrap-3@3.2.0', 'client');
+  
+  api.export('SinglePageLogin');
+  
 });
