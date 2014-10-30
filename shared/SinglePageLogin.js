@@ -1,4 +1,4 @@
-var SinglePageLogin;
+//var SinglePageLogin;
 
 SinglePageLogin = {
   settings: {
