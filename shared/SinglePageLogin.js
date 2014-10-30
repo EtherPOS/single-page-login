@@ -29,28 +29,36 @@ SinglePageLogin = {
     //   return e.name === 'entrySignUp';
     // });
     Router.map(function() {
-      this.route('singlePageLogin', {
-        path: '/login'
+      this.route('/login', {
+        name: 'singlePageLogin',
+        path: '/login',
+        template: 'singlePageLogin',
+        where: 'client'
       });
-      this.route('singlePageSignUp', {
+      this.route('signup', {
+        name: 'singlePageSignUp',
         path: '/signup',
+        template: 'singlePageSignUp',
+        where: 'client'
       });
-      this.route('singlePageForgotPassword', {
+      this.route('/forgot-password', {
+        name: 'singlePageForgotPassword',
         path: '/forgot-password',
+        template:  'singlePageForgotPassword',
+        where: 'client'
       });
 
     });
     
-    var requireLogin = function(pause) {
-      if (!(Meteor.loggingIn() || Meteor.user())) {
-        this.render('singlePageLogin');
-        pause();
-      }
-    }
-    
     if(this.settings.forceLogin){
       this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
-      Router.onBeforeAction(requireLogin, {except: this.settings.exceptRoutes});
+      Router.onBeforeAction(function(){
+        if (!Meteor.userId()) {
+          this.render('singlePageLogin');
+        } else {
+          this.next();
+        }
+      }, {except: this.settings.exceptRoutes});
     }
     
   }
