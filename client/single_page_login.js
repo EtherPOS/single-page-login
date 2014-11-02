@@ -44,12 +44,6 @@ Template.singlePageLogin.events({
       Alert.add(error, t);
     }
   },
-  'click #new-account': function(e,t){
-    Router.go('singlePageSignUp');
-  },
-  'click #forgot-password': function(e,t){
-    Router.go('singlePageForgotPassword');
-  }
 });
 
 Template.singlePageSignUp.events({
@@ -94,7 +88,7 @@ Template.singlePageSignUp.events({
   },
   'click #cancel': function(e,t){
     e.preventDefault();
-    Router.go('singlePageLogin');
+    Router.go('/login');
   }
 });
 
@@ -143,7 +137,7 @@ Template.singlePageForgotPassword.events({
         if(error){
           Alert.add(error, t);
         }else{
-          Router.go('singlePageLogin');
+          Router.go('/login');
         }
         t.find('#submit').innerHTML = 'Submit';
       $('.btn').attr("disabled", false);
@@ -154,7 +148,7 @@ Template.singlePageForgotPassword.events({
   },
   'click #cancel': function(e,t){
     e.preventDefault();
-    Router.go('singlePageLogin');
+    Router.go('/login');
   }
 });
 

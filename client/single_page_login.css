@@ -61,7 +61,7 @@
 }
 
 .profile-img
-{   
+{
     width: 96px;
     height: 96px;
     margin: 0 auto 10px;
@@ -71,11 +71,11 @@
     border-radius: 50%;
 }
 
-.new-account
+.text-display
 {
     display: block;
     margin-top: 10px;
 }
 #single-page-login-alert-msg{
-   margin: 5px 5px 5px 5px; 
+   margin: 5px 5px 5px 5px;
 }
