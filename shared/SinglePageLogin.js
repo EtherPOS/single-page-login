@@ -28,26 +28,25 @@ SinglePageLogin = {
     // Router.routes = _.reject(Router.routes, function(e, i) {
     //   return e.name === 'entrySignUp';
     // });
-    Router.map(function() {
-      this.route('/login', {
-        name: 'singlePageLogin',
-        path: '/login',
-        template: 'singlePageLogin',
-        where: 'client'
-      });
-      this.route('signup', {
-        name: 'singlePageSignUp',
-        path: '/signup',
-        template: 'singlePageSignUp',
-        where: 'client'
-      });
-      this.route('/forgot-password', {
-        name: 'singlePageForgotPassword',
-        path: '/forgot-password',
-        template:  'singlePageForgotPassword',
-        where: 'client'
-      });
-
+    Router.route('/login', {
+      name: 'singlePageLogin',
+      path: '/login',
+      template: 'singlePageLogin',
+      where: 'client'
+    });
+      
+    Router.route('/signup', {
+      name: 'singlePageSignUp',
+      path: '/signup',
+      template: 'singlePageSignUp',
+      where: 'client'
+    });
+    
+    Router.route('/forgot-password', {
+      name: 'singlePageForgotPassword',
+      path: '/forgot-password',
+      template:  'singlePageForgotPassword',
+      where: 'client'
     });
     
     if(this.settings.forceLogin){
