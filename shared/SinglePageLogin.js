@@ -25,35 +25,62 @@ SinglePageLogin = {
       forbidClientAccountCreation: this.settings.forbidClientAccountCreation
     });
 
-    // Router.routes = _.reject(Router.routes, function(e, i) {
-    //   return e.name === 'entrySignUp';
-    // });
-    Router.route('/login', {
-      name: 'singlePageLogin',
-      path: '/login',
-      template: 'singlePageLogin',
-      where: 'client'
-    });
-      
-    Router.route('/signup', {
-      name: 'singlePageSignUp',
-      path: '/signup',
-      template: 'singlePageSignUp',
-      where: 'client'
-    });
     
-    Router.route('/forgot-password', {
-      name: 'singlePageForgotPassword',
-      path: '/forgot-password',
-      template:  'singlePageForgotPassword',
-      where: 'client'
-    });
+    // Router.route('/login', {
+    //   name: 'singlePageLogin',
+    //   path: '/login',
+    //   template: 'singlePageLogin',
+    //   where: 'client'
+    // });
+    
+    Router.route('/login', 'singlePageLogin');
+      
+    // Router.route('/signup', {
+    //   name: 'singlePageSignUp',
+    //   path: '/signup',
+    //   template: 'singlePageSignUp',
+    //   where: 'client'
+    // });
+    
+    Router.route('/signup', 'singlePageSignUp');
+    
+    // Router.route('/forgot-password', {
+    //   name: 'singlePageForgotPassword',
+    //   path: '/forgot-password',
+    //   template:  'singlePageForgotPassword',
+    //   where: 'client'
+    // });
+    
+    Router.route('/forgot-password', 'singlePageForgotPassword');
+    
+    // Router.onRun(function(){
+    //   console.log('onRun ran');
+    //   this.next();
+    // });
+    
+    // Router.onRerun(function(){
+    //   console.log('onRerun ran');
+    //   this.next();
+    // });
     
     if(this.settings.forceLogin){
       this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
-      Router.onBeforeAction(function(){
-        if (!Meteor.userId()) {
-          this.render('singlePageLogin');
+      Router.onRun(function(){
+        // above was onBeforeAction
+        // console.log('Single Page Login onRun')
+        if ( !Meteor.user() ) {
+          //this.render('singlePageLogin');
+          Router.go('/login');
+        } else {
+          this.next();
+        }
+      }, {except: this.settings.exceptRoutes});
+      Router.onRerun(function(){
+        // above was onBeforeAction
+        // console.log('Single Page Login onRerun')
+        if ( !Meteor.user() ) {
+          //this.render('singlePageLogin');
+          Router.go('/login');
         } else {
           this.next();
         }
