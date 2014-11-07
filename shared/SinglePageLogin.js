@@ -1,7 +1,8 @@
 //var SinglePageLogin;
 
 Meteor.startup(function () {
-
+  // console.log('added login, signup, forgot-password routes');
+  
   Router.route('/login', 'singlePageLogin');
     
   Router.route('/signup', 'singlePageSignUp');
@@ -43,6 +44,7 @@ Meteor.startup(function () {
         if ( !Meteor.user() ) {
           //this.render('singlePageLogin');
           Router.go('/login');
+          this.next();
         } else {
           this.next();
         }
@@ -53,6 +55,7 @@ Meteor.startup(function () {
         if ( !Meteor.user() ) {
           //this.render('singlePageLogin');
           Router.go('/login');
+          this.next();
         } else {
           this.next();
         }
