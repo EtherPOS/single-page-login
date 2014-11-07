@@ -1,6 +1,16 @@
 //var SinglePageLogin;
 
-SinglePageLogin = {
+Meteor.startup(function () {
+
+  Router.route('/login', 'singlePageLogin');
+    
+  Router.route('/signup', 'singlePageSignUp');
+    
+  Router.route('/forgot-password', 'singlePageForgotPassword');
+  
+});
+
+  SinglePageLogin = {
   settings: {
     loginTitle: 'Single page login',
     signupTitle: 'Single page sign up',
@@ -25,44 +35,6 @@ SinglePageLogin = {
       forbidClientAccountCreation: this.settings.forbidClientAccountCreation
     });
 
-    
-    // Router.route('/login', {
-    //   name: 'singlePageLogin',
-    //   path: '/login',
-    //   template: 'singlePageLogin',
-    //   where: 'client'
-    // });
-    
-    Router.route('/login', 'singlePageLogin');
-      
-    // Router.route('/signup', {
-    //   name: 'singlePageSignUp',
-    //   path: '/signup',
-    //   template: 'singlePageSignUp',
-    //   where: 'client'
-    // });
-    
-    Router.route('/signup', 'singlePageSignUp');
-    
-    // Router.route('/forgot-password', {
-    //   name: 'singlePageForgotPassword',
-    //   path: '/forgot-password',
-    //   template:  'singlePageForgotPassword',
-    //   where: 'client'
-    // });
-    
-    Router.route('/forgot-password', 'singlePageForgotPassword');
-    
-    // Router.onRun(function(){
-    //   console.log('onRun ran');
-    //   this.next();
-    // });
-    
-    // Router.onRerun(function(){
-    //   console.log('onRerun ran');
-    //   this.next();
-    // });
-    
     if(this.settings.forceLogin){
       this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
       Router.onRun(function(){
@@ -90,4 +62,5 @@ SinglePageLogin = {
   }
 };
 
-this.SinglePageLogin = SinglePageLogin;
+  this.SinglePageLogin = SinglePageLogin;
+
