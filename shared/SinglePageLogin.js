@@ -1,16 +1,5 @@
 //var SinglePageLogin;
 
-Meteor.startup(function () {
-  // console.log('added login, signup, forgot-password routes');
-  
-  Router.route('/login', 'singlePageLogin');
-    
-  Router.route('/signup', 'singlePageSignUp');
-    
-  Router.route('/forgot-password', 'singlePageForgotPassword');
-  
-});
-
   SinglePageLogin = {
   settings: {
     loginTitle: 'Single page login',
@@ -32,10 +21,18 @@ Meteor.startup(function () {
         passwordSignupFields: this.settings.passwordSignupFields
       });
     }
+    
     Accounts.config({
       forbidClientAccountCreation: this.settings.forbidClientAccountCreation
     });
-
+    
+    
+    Router.route('/login', 'singlePageLogin');
+    
+    Router.route('/signup', 'singlePageSignUp');
+      
+    Router.route('/forgot-password', 'singlePageForgotPassword');
+    
     if(this.settings.forceLogin){
       this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
       Router.onRun(function(){

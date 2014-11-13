@@ -137,7 +137,7 @@ Template.singlePageForgotPassword.events({
         if(error){
           Alert.add(error, t);
         }else{
-          Router.go('/login');
+          Alert.add('Password resent to your email.', t);
         }
         t.find('#submit').innerHTML = 'Submit';
       $('.btn').attr("disabled", false);
