@@ -1,7 +1,7 @@
 Package.describe({
   summary: "A meteor package for a Bootstrap 3 Googlesque login, sign up and password reminder",
   // Version number.
-  version: "0.4.4",
+  version: "0.4.5",
   // Optional.  Default is package directory name.
   name: "steeve:single-page-login",
   // Optional github URL to your source repository.

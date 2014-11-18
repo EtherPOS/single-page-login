@@ -25,6 +25,7 @@ A meteor package for a Bootstrap 3 Googlesque login, sign up and password remind
 * forbidClientAccountCreation: Boolean. Sets the Accounts.config forbidClientAccountCreation fieild.
 * routeAfterLogin: Iron Router route after login.
 * routeAfterSignUp: Iron Router route after sign up.
+* routeAfterLogout: Iron Router route after logout else singlePageLogin is rendered.
 * forceLogin: Boolean.  Forces single page login except for signup and forgot-password routes.
 * exceptRoutes: Array. Add an array of routes that are ignored by foreLogin i.e ['home','about']
 
@@ -47,6 +48,7 @@ A meteor package for a Bootstrap 3 Googlesque login, sign up and password remind
 * /signup
 * /login
 * /forgot-password
+* /logout
 
 # License
 Copyright (c) 2013 [EtherPOS](http://www.etherpos.com/ "EtherPOS, LLC"). Released under an MIT license.

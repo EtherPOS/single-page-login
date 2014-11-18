@@ -10,6 +10,7 @@
     forbidClientAccountCreation: false,
     routeAfterLogin: '/dashboard',
     routeAfterSignUp: '/dashboard',
+    routeAfterLogout: 'singlePageLogin',
     forceLogin: false,
     exceptRoutes: [],
   },
@@ -32,6 +33,19 @@
     Router.route('/signup', 'singlePageSignUp');
       
     Router.route('/forgot-password', 'singlePageForgotPassword');
+    
+    Router.route('/logout', {
+      name:'logout',
+      path: '/logout',
+      action: function(){
+        if(this.routeAfterLogout){
+          Router.go(this.routeAfterLogout);
+        } else {
+          this.render('singlePageLogin');
+        }
+        Meteor.logout();
+      }
+    });
     
     if(this.settings.forceLogin){
       this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
