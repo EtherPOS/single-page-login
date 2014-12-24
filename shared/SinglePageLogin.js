@@ -48,7 +48,7 @@
     });
     
     if(this.settings.forceLogin){
-      this.settings.exceptRoutes.push('singlePageLogin','singlePageSignUp','singlePageForgotPassword');
+      this.settings.exceptRoutes.push('login','signup','forgot-password', 'logout');
       Router.onRun(function(){
         // above was onBeforeAction
         // console.log('Single Page Login onRun')

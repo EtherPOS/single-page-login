@@ -1,6 +1,10 @@
 HISTORY
 ========
 
+0.4.6
+======
+* fixed #8 Signup not possible with forceLogin true.
+
 0.2.2
 ======
 * Upgraded for Meteor 0.8.2 and iron-router 0.8.2
