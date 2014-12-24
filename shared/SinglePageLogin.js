@@ -39,7 +39,7 @@
       path: '/logout',
       action: function(){
         if(this.routeAfterLogout){
-          Router.go(this.routeAfterLogout);
+          Router.go(this.settings.routeAfterLogout);
         } else {
           this.render('singlePageLogin');
         }

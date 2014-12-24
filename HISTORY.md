@@ -1,6 +1,10 @@
 HISTORY
 ========
 
+0.4.7
+======
+* fixed #10 routeAfterLogout Does Not Work
+
 0.4.6
 ======
 * fixed #8 Signup not possible with forceLogin true.
