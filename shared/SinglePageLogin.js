@@ -22,31 +22,31 @@
         passwordSignupFields: this.settings.passwordSignupFields
       });
     }
-    
+
     Accounts.config({
       forbidClientAccountCreation: this.settings.forbidClientAccountCreation
     });
-    
-    
+
+
     Router.route('/login', 'singlePageLogin');
-    
+
     Router.route('/signup', 'singlePageSignUp');
-      
+
     Router.route('/forgot-password', 'singlePageForgotPassword');
-    
+
     Router.route('/logout', {
       name:'logout',
       path: '/logout',
       action: function(){
-        if(this.routeAfterLogout){
-          Router.go(this.settings.routeAfterLogout);
+        if(SinglePageLogin.settings.routeAfterLogout){
+          Router.go(SinglePageLogin.settings.routeAfterLogout);
         } else {
           this.render('singlePageLogin');
         }
         Meteor.logout();
       }
     });
-    
+
     if(this.settings.forceLogin){
       this.settings.exceptRoutes.push('login','signup','forgot-password', 'logout');
       Router.onRun(function(){
@@ -72,9 +72,8 @@
         }
       }, {except: this.settings.exceptRoutes});
     }
-    
+
   }
 };
 
   this.SinglePageLogin = SinglePageLogin;
-
