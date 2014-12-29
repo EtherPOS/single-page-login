@@ -1,6 +1,10 @@
 HISTORY
 ========
 
+0.4.8
+======
+* #10 routeAfterLogout Does Not Work additional fix
+
 0.4.7
 ======
 * fixed #10 routeAfterLogout Does Not Work
