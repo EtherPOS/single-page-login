@@ -1,6 +1,10 @@
 HISTORY
 ========
 
+0.4.9
+=====
+* fixed default routeAfterLogout: 'singlePageLogin' to routeAfterLogout: '/login'
+
 0.4.8
 ======
 * #10 routeAfterLogout Does Not Work additional fix
