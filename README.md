@@ -41,6 +41,8 @@ A meteor package for a Bootstrap 3 Googlesque login, sign up and password remind
       routeAfterLogin: '/dashboard',
       routeAfterSignUp: '/dashboard',
       forceLogin: true,
+      routeAfterLogout: '/',
+      exceptRoutes: ['home']
   });
 ```
 

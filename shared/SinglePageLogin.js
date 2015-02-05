@@ -10,7 +10,7 @@
     forbidClientAccountCreation: false,
     routeAfterLogin: '/dashboard',
     routeAfterSignUp: '/dashboard',
-    routeAfterLogout: 'singlePageLogin',
+    routeAfterLogout: '/login',
     forceLogin: false,
     exceptRoutes: [],
   },
