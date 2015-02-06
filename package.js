@@ -18,8 +18,9 @@ Package.onUse(function (api) {
     'accounts-ui',
     'handlebars',
     'iron:router@1.0.1',
-    'mizzao:bootstrap-3@3.3.0'
-    ], 'client');
+    'mizzao:bootstrap-3@3.3.0',
+    'underscore'
+    ]);
 
   api.addFiles([
     'client/single_page_login.css',
