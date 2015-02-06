@@ -52,7 +52,7 @@ sha@1.0.2
 spacebars@1.0.5
 spacebars-compiler@1.0.4
 srp@1.0.2
-steeve:single-page-login@0.4.9
+steeve:single-page-login@0.5.0
 templating@1.0.11
 tracker@1.0.5
 ui@1.0.5
