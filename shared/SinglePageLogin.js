@@ -47,7 +47,7 @@
       }
     });
 
-    if(this.settings.forceLogin){
+    if(Meteor.isClient && this.settings.forceLogin){
       this.settings.exceptRoutes.push('login','signup','forgot-password', 'logout');
       Router.onRun(function(){
         // above was onBeforeAction
