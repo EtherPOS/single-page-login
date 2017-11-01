@@ -17,8 +17,10 @@ Package.onUse(function (api) {
     'accounts-password',
     'accounts-ui',
     'handlebars',
-    'iron:router@1.0.1',
+    'iron:router@1.0.8',
     'iron:middleware-stack@1.1.0',
+    'iron:core@1.0.11',
+    'iron:url@1.0.11',
     'mizzao:bootstrap-3@3.3.0',
     'underscore'
     ]);
