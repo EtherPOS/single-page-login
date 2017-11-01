@@ -1,10 +1,11 @@
 HISTORY
 ========
 
-0.5.0
+0.5.2
 =====
+Trying to fix issues with iron router "Error: Handler with name 'hookWithOptions' already exists." and "Error: Handler with name 'u' already exists."
 
-upgraded iron router from 'iron:router@1.0.1'
+Changed package.js to the following
 
 'iron:router@1.0.8',
 'iron:middleware-stack@1.1.0',
