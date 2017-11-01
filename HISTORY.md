@@ -1,19 +1,15 @@
 HISTORY
 ========
 
-upgraded iron router from 'iron:router@1.0.1', to 1.0.8
+0.5.0
+=====
 
-iron:core              upgraded from 1.0.8 to 1.0.11
-iron:middleware-stack  upgraded from 1.0.9 to 1.1.0
-iron:url               upgraded from 1.0.9 to 1.0.11
+upgraded iron router from 'iron:router@1.0.1'
 
+'iron:router@1.0.8',
 'iron:middleware-stack@1.1.0',
-
-While selecting package versions:
-   error: Conflict: Constraint iron:router@1.0.11 is not satisfied by iron:router 1.0.7.
-   Constraints on package "iron:router":
-   * iron:router@1.0.11 <- steeve:single-page-login 0.5.1
-   * iron:router@1.0.1 <- steeve:iron-router-helpers 0.0.5
+'iron:core@1.0.11',
+'iron:url@1.0.11',
 
 
 
