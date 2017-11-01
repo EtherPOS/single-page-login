@@ -18,6 +18,7 @@ Package.onUse(function (api) {
     'accounts-ui',
     'handlebars',
     'iron:router@1.0.1',
+    'iron:middleware-stack@1.1.0',
     'mizzao:bootstrap-3@3.3.0',
     'underscore'
     ]);
@@ -33,5 +34,5 @@ Package.onUse(function (api) {
   api.addFiles('shared/SinglePageLogin.js');
 
   api.export('SinglePageLogin');
-  
+
 });

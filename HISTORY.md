@@ -29,4 +29,3 @@ HISTORY
 0.1.6
 ======
 * Meteor 0.7.2 and earlier
-
